@@ -3,7 +3,7 @@ import Note from './Note'
 
 const NoteList = () => {
   return (
-    <div>
+    <div className='note-list'>
         <Note />
     </div>
   )

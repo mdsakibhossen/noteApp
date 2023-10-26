@@ -1,15 +1,20 @@
 import React from 'react'
 import SelectBox from "./SelectBox";
-import Form from "./Form";
 import SearchBox from "./SearchBox";
 
 const HeaderSection = () => {
   return (
-    <div>
-      <SelectBox />
-      <Form />
-      <SearchBox />
-    </div>
+    <header className="header-section">
+      <div className="logo">
+        <a href="">
+          <span>Note</span>App
+        </a>
+      </div>
+      <div className="filter-boxes">
+        <SelectBox />
+        <SearchBox />
+      </div>
+    </header>
   );
 }
 

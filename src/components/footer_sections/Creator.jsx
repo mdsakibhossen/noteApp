@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
 
-const Creator = () => {
+const Creator = (props) => {
   return (
-    <div>Creator</div>
-  )
-}
+    <div className="creator">
+      <p>Name: {props.name}</p>
+      <p>
+        Email: <a href={"mailto:"+ props.email}>{props.email}</a>
+      </p>
+    </div>
+  );
+};
 
-export default Creator
+export default Creator;
