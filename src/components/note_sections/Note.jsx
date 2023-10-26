@@ -2,20 +2,22 @@ import React from 'react'
 
 const Note = () => {
   return (
-    <div className="note">
+    <div className="note shadow-xl p-4 rounded-md text-slate-200 font-light bg-slate-600">
       <div className="note-header">
-        <h3>My First Note</h3>
+        <h3 className='font-medium text-xl mb-2 text-orange-500 tracking-widest'>My First Note</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit inventore
           distinctio facere, suscipit similique illum! Accusantium consequuntur
           maiores explicabo corrupti!
         </p>
       </div>
-      <div className="note-footer">
-        <div className="date">16/07/2023</div>
-        <div className="btn-box">
-          <button>Edit</button>
-          <button>Delete</button>
+      <div className="note-footer flex mt-3">
+        <div className="date me-auto text-slate-400">
+          <small>16/07/2023</small>
+        </div>
+        <div className="btn-box flex gap-3">
+          <button className="text-lime-500">Edit</button>
+          <button className="text-red-500">Delete</button>
         </div>
       </div>
     </div>
