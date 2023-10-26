@@ -7,7 +7,7 @@ const HeaderSection = () => {
     <header className="header-section">
       <div className="logo">
         <a href="">
-          <span>Note</span>App
+          <span className="text-yellow-600">Note</span>App
         </a>
       </div>
       <div className="filter-boxes">
