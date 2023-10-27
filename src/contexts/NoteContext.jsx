@@ -7,7 +7,8 @@ const initialState = {
     noteDescription: "",
     noteList: [],
     editMode: false,
-    editableNote: null
+    editableNote: null,
+    searchText: ""
 };
 
 const NoteProvider = ({children}) => {

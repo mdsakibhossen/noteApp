@@ -70,9 +70,12 @@ export const noteReducer = (state, action) => {
                 noteList: state.noteList.filter((note) => note !== action.payload)            
             }
         }
+        case "SEARCH_NOTE":{
+            return{
+                ...state,
+                searchText: action.payload
+            }
+        }
 
-
-        default:
-            break;
     }
 }
