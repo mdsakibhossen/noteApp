@@ -5,20 +5,14 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --primary-color: #F80;
-  --secondary-color: #222;
-  --white-color: #fff;
-  --bg-color: #141526ed;
-  --transition: all .3s ease;
-}
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /* font-family: 'Barlow', sans-serif; */
   font-family: 'Poppins', sans-serif;
+}
+
+.title {
+  font-family: 'Barlow', sans-serif;
+
 }
 
 .header-section, .footer-section {
