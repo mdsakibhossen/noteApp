@@ -3,12 +3,13 @@ import { noteReducer } from "../reducers/noteReducer";
 export const NoteContext = createContext();
 
 const initialState = {
-    noteTitle: "",
-    noteDescription: "",
-    noteList: [],
-    editMode: false,
-    editableNote: null,
-    searchText: ""
+  noteTitle: "",
+  noteDescription: "",
+  noteList: [],
+  editMode: false,
+  editableNote: null,
+  searchText: "",
+  noteStatus: "undefined",
 };
 
 const NoteProvider = ({children}) => {

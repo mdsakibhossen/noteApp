@@ -4,9 +4,14 @@ import { BsTrash } from "react-icons/bs";
 import { NoteContext } from "../../contexts/NoteContext";
 
 const Note = (props) => {
-  const {dispatch} = useContext(NoteContext);
+  const { dispatch } = useContext(NoteContext);
   return (
-    <div className="note shadow-xl p-4 rounded-md text-slate-200 font-light bg-slate-600">
+    <div
+      className={props.note.isCompleted
+          ? "note shadow-xl p-4 rounded-md text-slate-300 font-light bg-slate-900"
+          : "note shadow-xl p-4 rounded-md text-slate-300 font-light bg-slate-600"
+      }
+    >
       <div className="note-header">
         <h3 className="title font-semibold text-2xl mb-2 text-blue-400 tracking-wider">
           {props.note.title}
@@ -19,8 +24,12 @@ const Note = (props) => {
         </div>
         <div className="btn-box flex gap-3 items-center">
           <input
+            onChange={() =>
+              dispatch({ type: "CHANGE_NOTE_STATUS", payload: props.note })
+            }
             className="cursor-pointer rounded text-blue-600"
             type="checkbox"
+            checked={props.note.isCompleted && "checked"}
           />
           <button
             className="text-lime-500"

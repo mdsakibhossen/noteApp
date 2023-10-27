@@ -21,7 +21,7 @@ export const noteReducer = (state, action) => {
                 id: Date.now() + "",
                 title: state.noteTitle,
                 description: state.noteDescription,
-                isCompleted: undefined,
+                isCompleted: false,
                 date: currentDate
             }
             // console.log(state.noteList);
@@ -74,6 +74,29 @@ export const noteReducer = (state, action) => {
             return{
                 ...state,
                 searchText: action.payload
+            }
+        }
+        case "CHANGE_NOTE_STATUS":{
+            
+            return {
+                ...state,
+                noteList: state.noteList.map(note=> {
+                    if (action.payload === note) {
+                        return {
+                            ...note,
+                            isCompleted: !note.isCompleted
+                        }
+                    }
+                    return note;
+                    
+                })
+            }
+        }
+        case "SELECT_NOTE_TYPE":{
+            // console.log(state.noteStatus);
+            return {
+                ...state,
+                noteStatus: action.payload
             }
         }
 
