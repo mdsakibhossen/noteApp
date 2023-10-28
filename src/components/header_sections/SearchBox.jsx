@@ -1,8 +1,8 @@
-import React, { useContext } from 'react'
-import { NoteContext } from './../../contexts/NoteContext';
+import { useContext } from "react";
+import { NoteContext } from "./../../contexts/NoteContext";
 
 const SearchBox = () => {
-  const {noteStates,dispatch} = useContext(NoteContext);
+  const { noteStates, dispatch } = useContext(NoteContext);
   return (
     <div className="search-box w-full">
       <input
@@ -16,6 +16,6 @@ const SearchBox = () => {
       />
     </div>
   );
-}
+};
 
-export default SearchBox
+export default SearchBox;

@@ -24,7 +24,6 @@ export const noteReducer = (state, action) => {
                 isCompleted: false,
                 date: currentDate
             }
-            // console.log(state.noteList);
             return {
                 ...state,
                 noteList: [...state.noteList, newNote],
@@ -32,7 +31,7 @@ export const noteReducer = (state, action) => {
                 noteDescription: "",
             }
         }
-        case "EDIT_NOTE":{
+        case "EDIT_NOTE": {
             return {
                 ...state,
                 noteTitle: action.payload.title,
@@ -41,9 +40,9 @@ export const noteReducer = (state, action) => {
                 editableNote: action.payload
             }
         }
-        case "UPDATE_NOTE":{
+        case "UPDATE_NOTE": {
             const currentDate = getDate();
-            const newNoteList = state.noteList.map(note=>{
+            const newNoteList = state.noteList.map(note => {
                 if (state.editableNote === note) {
                     return {
                         ...note,
@@ -54,7 +53,6 @@ export const noteReducer = (state, action) => {
                 }
                 return note
             })
-            // console.log(newNoteList);
             return {
                 ...state,
                 noteList: newNoteList,
@@ -67,20 +65,20 @@ export const noteReducer = (state, action) => {
         case "DELETE_NOTE": {
             return {
                 ...state,
-                noteList: state.noteList.filter((note) => note !== action.payload)            
+                noteList: state.noteList.filter((note) => note !== action.payload)
             }
         }
-        case "SEARCH_NOTE":{
-            return{
+        case "SEARCH_NOTE": {
+            return {
                 ...state,
                 searchText: action.payload
             }
         }
-        case "CHANGE_NOTE_STATUS":{
-            
+        case "CHANGE_NOTE_STATUS": {
+
             return {
                 ...state,
-                noteList: state.noteList.map(note=> {
+                noteList: state.noteList.map(note => {
                     if (action.payload === note) {
                         return {
                             ...note,
@@ -88,12 +86,11 @@ export const noteReducer = (state, action) => {
                         }
                     }
                     return note;
-                    
+
                 })
             }
         }
-        case "SELECT_NOTE_TYPE":{
-            // console.log(state.noteStatus);
+        case "SELECT_NOTE_TYPE": {
             return {
                 ...state,
                 noteStatus: action.payload

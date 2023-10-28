@@ -1,5 +1,3 @@
-import React from "react";
-
 const Creator = (props) => {
   return (
     <div className="creator text-slate-300 bg-slate-800 p-3 rounded-md w-full">

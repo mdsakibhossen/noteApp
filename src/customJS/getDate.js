@@ -1,4 +1,4 @@
-export const getDate = ()=>{
+export const getDate = () => {
     let currentDate = new Date();
     const d = currentDate.getDate() < 10 ? `0${currentDate.getDate()}` : currentDate.getDate();
     const m = currentDate.getMonth() + 1 < 10 ? `0${currentDate.getMonth() + 1}` : currentDate.getMonth() + 1;

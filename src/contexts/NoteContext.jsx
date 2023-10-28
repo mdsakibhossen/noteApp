@@ -12,12 +12,12 @@ const initialState = {
   noteStatus: "undefined",
 };
 
-const NoteProvider = ({children}) => {
-    const [noteStates, dispatch] = useReducer(noteReducer,initialState);
-    const noteContextValue = {
-      noteStates,
-      dispatch
-    };
+const NoteProvider = ({ children }) => {
+  const [noteStates, dispatch] = useReducer(noteReducer, initialState);
+  const noteContextValue = {
+    noteStates,
+    dispatch,
+  };
   return (
     <NoteContext.Provider value={noteContextValue}>
       {children}

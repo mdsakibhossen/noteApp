@@ -1,4 +1,3 @@
-import React from 'react'
 import SelectBox from "./SelectBox";
 import SearchBox from "./SearchBox";
 
@@ -18,6 +17,6 @@ const HeaderSection = () => {
       </div>
     </header>
   );
-}
+};
 
-export default HeaderSection
+export default HeaderSection;

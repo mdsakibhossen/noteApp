@@ -1,4 +1,3 @@
-import React from "react";
 import Creator from "./Creator";
 
 const FooterSection = () => {
@@ -8,7 +7,6 @@ const FooterSection = () => {
         <p className="text-white">Created By: </p>
         <div className="creators flex flex-wrap justify-center gap-5 md:flex-nowrap">
           <Creator name="Shakib Sardar" email="shakib6443@gmail.com" />
-          <Creator name="Sou Rav" email="sourav@gmail.com" />
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { FiEdit } from "react-icons/fi";
 import { BsTrash } from "react-icons/bs";
 import { NoteContext } from "../../contexts/NoteContext";
@@ -7,7 +7,8 @@ const Note = (props) => {
   const { dispatch } = useContext(NoteContext);
   return (
     <div
-      className={props.note.isCompleted
+      className={
+        props.note.isCompleted
           ? "note shadow-xl p-4 rounded-md text-slate-300 font-light bg-slate-900"
           : "note shadow-xl p-4 rounded-md text-slate-300 font-light bg-slate-600"
       }

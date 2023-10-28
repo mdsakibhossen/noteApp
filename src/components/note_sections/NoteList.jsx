@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import Note from "./Note";
 import { NoteContext } from "../../contexts/NoteContext";
 
@@ -23,30 +23,28 @@ const NoteList = () => {
       break;
   }
 
-
   if (noteStates.searchText.trim()) {
     filteredNotes = filteredNotes.filter(
-     (note) =>
-       note.title
-         .trim()
-         .toLowerCase()
-         .includes(noteStates.searchText.trim().toLowerCase()) ||
-       note.description
-         .trim()
-         .toLowerCase()
-         .includes(noteStates.searchText.trim().toLowerCase())
-   );
+      (note) =>
+        note.title
+          .trim()
+          .toLowerCase()
+          .includes(noteStates.searchText.trim().toLowerCase()) ||
+        note.description
+          .trim()
+          .toLowerCase()
+          .includes(noteStates.searchText.trim().toLowerCase())
+    );
   }
-   
 
   const hasFilteredNotes = filteredNotes.length ? true : false;
-  
+
   return (
     <div
       className={
         hasFilteredNotes
           ? "note-list w-full lg:w-2/3 grid xl:grid-cols-2 gap-4"
-          : "w-full flex items-center justify-center self-center"
+          : "w-full lg:w-2/3 flex items-center justify-center self-center"
       }
     >
       {hasFilteredNotes ? (

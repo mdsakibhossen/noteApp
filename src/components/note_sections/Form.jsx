@@ -8,11 +8,13 @@ const Form = () => {
     if (!(noteStates.noteTitle && noteStates.noteDescription)) {
       return alert("Please Enter Note Title & Description...");
     }
-    noteStates.editMode ? dispatch({
-      type: "UPDATE_NOTE"
-    }) : dispatch({
-      type: "ADD_NOTE"
-    })
+    noteStates.editMode
+      ? dispatch({
+          type: "UPDATE_NOTE",
+        })
+      : dispatch({
+          type: "ADD_NOTE",
+        });
   };
   return (
     <div className="form w-full sm:w-2/3 lg:w-1/3">
